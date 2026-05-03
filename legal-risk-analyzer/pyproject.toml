@@ -1,0 +1,41 @@
+[project]
+name = "legal-risk-analyzer"
+version = "0.1.0"
+description = "法律文件风险点分析系统 - 基于 SeekDB、PowerRAG 和 PowerMem"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-core>=0.3.0",
+    "pyseekdb>=0.1.0",
+    "powermem>=0.1.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pypdf>=5.0.0",
+    "python-docx>=1.1.0",
+    "python-pptx>=1.0.0",
+    "openai>=1.0.0",
+    "httpx>=0.27.0",
+    "streamlit>=1.40.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
